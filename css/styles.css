@@ -1,25 +1,40 @@
-body, html {
+html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  color: #fff;
   background: #000;
+  color: #fff;
 }
 
+/* 공통 */
+a {
+  text-decoration: none;
+  color: #fff;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 헤더 */
 .header {
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.8);
+  width: 100%;
+  background: rgba(0,0,0,0.7);
   z-index: 1000;
+  padding: 10px 0;
 }
 
 .header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .logo img {
@@ -27,15 +42,16 @@ body, html {
 }
 
 .nav ul {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
-.nav a {
-  text-decoration: none;
-  color: #fff;
+.nav-link {
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: #00aaff;
 }
 
 .auth-buttons {
@@ -43,18 +59,20 @@ body, html {
   gap: 10px;
 }
 
-.login-btn, .signup-btn {
+.auth-btn {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
-  padding: 5px 10px;
+  padding: 5px 12px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
-.login-btn:hover, .signup-btn:hover {
+.auth-btn:hover {
   background: #fff;
   color: #000;
 }
 
+/* 히어로 섹션 */
 .hero-section {
   position: relative;
   height: 100vh;
@@ -64,7 +82,7 @@ body, html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 60px; /* 헤더 공간 */
+  padding-top: 60px; /* 헤더 공간 확보 */
 }
 
 .bg-video {
@@ -78,29 +96,31 @@ body, html {
 
 .overlay {
   position: absolute;
-  top:0;left:0;bottom:0;right:0;
-  background: rgba(0,0,0,0.4);
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.5);
 }
 
 .hero-content {
   position: relative;
-  max-width: 600px;
   z-index: 1;
+  max-width: 600px;
   padding: 0 20px;
 }
 
-.hero-content h1 {
-  font-size: 2rem;
+.hero-title {
+  font-size: 3rem;
   margin-bottom: 20px;
+  line-height: 1.2;
 }
 
-.hero-content p {
-  font-size: 1.1rem;
+.hero-subtitle {
+  font-size: 1.2rem;
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .cta-button {
-  background: #0066ff;
+  background: #00aaff;
   border: none;
   color: #fff;
   padding: 15px 30px;
@@ -109,44 +129,5 @@ body, html {
   transition: background 0.3s ease;
 }
 .cta-button:hover {
-  background: #0052cc;
-}
-
-.info-section {
-  padding: 80px 20px;
-  background: #111;
-  text-align: center;
-}
-
-.info-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-.info-section p {
-  font-size: 1.1rem;
-  margin-bottom: 50px;
-}
-
-.footer {
-  background: #000;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.footer-inner {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: #fff;
+  background: #0088cc;
 }

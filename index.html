@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>ConstaX Official Site</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
@@ -12,17 +12,18 @@
 <header class="header">
     <div class="header-inner">
         <div class="logo">
-            <img src="logo.png" alt="ConstaX Logo" />
+            <!-- 로고 이미지 -->
+            <img src="images/logo.png" alt="ConstaX Logo" />
         </div>
         <nav class="nav">
             <ul>
-                <li><a href="#cash">캐시 충전</a></li>
-                <li><a href="#records">전적 확인</a></li>
+                <li><a href="#cash" class="nav-link">캐시 충전</a></li>
+                <li><a href="#records" class="nav-link">전적 확인</a></li>
             </ul>
         </nav>
         <div class="auth-buttons">
-            <button class="login-btn">로그인</button>
-            <button class="signup-btn">회원가입</button>
+            <button class="auth-btn">로그인</button>
+            <button class="auth-btn">회원가입</button>
         </div>
     </div>
 </header>
@@ -30,35 +31,20 @@
 <!-- 히어로 섹션 -->
 <section class="hero-section">
     <video class="bg-video" autoplay muted loop playsinline>
-        <source src="video-bg.mp4" type="video/mp4">
+        <source src="videos/video-bg.mp4" type="video/mp4">
     </video>
     <div class="overlay"></div>
     <div class="hero-content">
-        <h1>3대3 전투 액션, ConstaX에 오신 것을 환영합니다!</h1>
-        <p>개성 넘치는 캐릭터, 팀 전략, 빠른 매칭으로 압도적인 전투 액션을 즐겨보세요.</p>
+        <!-- 메인 타이틀 (수정 가능) -->
+        <h1 class="hero-title">3대3 전투 액션, ConstaX</h1>
+        <!-- 서브 텍스트 (수정 가능) -->
+        <p class="hero-subtitle">
+            전략적 플레이와 빠른 액션! 강렬한 팀 전투를 지금 경험해보세요.
+        </p>
+        <!-- CTA 버튼 (수정 가능) -->
         <button class="cta-button">지금 다운로드하기</button>
     </div>
 </section>
 
-<!-- 추가 섹션 (예: 캐릭터 소개) -->
-<section class="info-section">
-    <h2>다양한 캐릭터와 전투 모드</h2>
-    <p>각 캐릭터의 개성, 스킬 세트, 게임 모드를 확인하고 전략을 세워보세요.</p>
-    <!-- 여기에 캐릭터 카드, 모드 소개 등을 추가 가능 -->
-</section>
-
-<!-- 푸터 -->
-<footer class="footer">
-    <div class="footer-inner">
-        <p>© 2024 ConstaX Corp. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="#terms">이용 약관</a></li>
-            <li><a href="#privacy">개인정보처리방침</a></li>
-            <li><a href="#support">고객 지원</a></li>
-        </ul>
-    </div>
-</footer>
-
-<script src="scripts.js"></script>
 </body>
 </html>
