@@ -33,7 +33,7 @@ ul {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* 로고와 텍스트가 맞춰질 패딩 */
+  padding: 0 20px; /* 좌우 패딩 */
 }
 
 .logo img {
@@ -77,13 +77,21 @@ ul {
   background: rgba(0,0,0,0.5);
 }
 
+/* 헤더와 맞춰 좌측 정렬을 하기 위한 컨테이너 */
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%; /* 필요시 제거 */
+  display: flex;
+  align-items: center; /* 수직 정렬 */
+}
+
+/* 히어로 내용 */
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 20px; /* 헤더와 같은 좌측 padding */
-  text-align: left; /* 텍스트 왼쪽 정렬 */
+  text-align: left; /* 왼쪽 정렬 */
 }
 
 /* 어워드 섹션 */
@@ -103,20 +111,6 @@ ul {
   font-size: 0.9rem;
   color: #ccc;
   margin: 0 0 20px 0;
-}
-
-/* 회전하는 3D 오브젝트 */
-.rotating-object {
-  width: 15px;
-  height: 15px;
-  background: #fff;
-  animation: spin 2s linear infinite;
-  display: inline-block;
-}
-
-@keyframes spin {
-  0% { transform: rotateY(0deg); }
-  100% { transform: rotateY(360deg); }
 }
 
 /* 히어로 텍스트 */

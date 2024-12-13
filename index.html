@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>ConstaX Official Site</title>
+    <!-- model-viewer 스크립트 로드 -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -31,21 +33,28 @@
     </video>
     <div class="overlay"></div>
 
-    <div class="hero-content">
-        <!-- 상단 어워드 표시 섹션 -->
-        <div class="award-container">
-            <p class="award-text">
-                <span class="rotating-object"></span> Framer Award 2024
-            </p>
-            <p class="award-subtext">Additional faint text here</p>
-        </div>
+    <!-- 헤더와 같은 폭/패딩을 맞추기 위한 컨테이너 -->
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="award-container">
+                <p class="award-text">
+                    <!-- 실제 3D 모델 삽입 -->
+                    <model-viewer src="models/3d-object.glb" alt="3D rotating object"
+                                  auto-rotate camera-controls disable-zoom
+                                  style="width:30px;height:30px;vertical-align:middle;">
+                    </model-viewer>
+                    Framer Award 2024
+                </p>
+                <p class="award-subtext">Additional faint text here</p>
+            </div>
 
-        <!-- 메인 타이틀 (수정 가능) -->
-        <h1 class="hero-title">The web builder</h1>
-        <!-- 서브 텍스트 (수정 가능) -->
-        <p class="hero-subtitle">여기에 간략한 설명 텍스트를 넣을 수 있습니다.</p>
-        <!-- CTA 버튼 (수정 가능) -->
-        <button class="cta-button">지금 다운로드하기</button>
+            <!-- 메인 타이틀 (수정 가능) -->
+            <h1 class="hero-title">The web builder</h1>
+            <!-- 서브 텍스트 (수정 가능) -->
+            <p class="hero-subtitle">여기에 간략한 설명 텍스트를 넣을 수 있습니다.</p>
+            <!-- CTA 버튼 (수정 가능) -->
+            <button class="cta-button">지금 다운로드하기</button>
+        </div>
     </div>
 </section>
 
