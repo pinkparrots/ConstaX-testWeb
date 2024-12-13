@@ -4,6 +4,7 @@ html, body {
   font-family: sans-serif;
   background: #000;
   color: #fff;
+  height: 100%; /* 전체높이 지정 */
 }
 
 a {
@@ -59,7 +60,7 @@ ul {
   color: #00aaff;
 }
 
-/* 소셜 아이콘 */
+/* 소셜 아이콘 크기 조정 (28px) */
 .social-icons {
   display: flex;
   gap: 15px;
