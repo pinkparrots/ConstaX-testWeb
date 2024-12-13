@@ -7,10 +7,36 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="store-body">
-<div class="store-container">
+
+<!-- 메인 페이지와 동일한 헤더 추가 -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <img src="images/logo.png" alt="ConstaX Logo" />
+    </div>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="store.html" class="nav-link">스토어</a></li>
+        <li><a href="#records" class="nav-link">전적 확인</a></li>
+      </ul>
+    </nav>
+
+    <div class="social-icons">
+      <a href="https://x.com/ConstaXOfficial" target="_blank">
+        <img src="images/twitter-icon.png" alt="Twitter" class="icon-img"/>
+      </a>
+      <a href="https://discord.gg/crTDQncnWM" target="_blank">
+        <img src="images/discord-icon.png" alt="Discord" class="icon-img"/>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="store-container" style="padding-top: 80px;"> <!-- 헤더 높이 확보를 위해 상단 padding -->
   <header class="store-header">
+    <!-- '오늘의 추천 아이템' 텍스트 제거 -->
     <h1 class="store-title">ConstaX 스토어</h1>
-    <p class="store-subtitle">오늘의 추천 아이템</p>
   </header>
   <section class="store-content">
     <div class="product-grid">
