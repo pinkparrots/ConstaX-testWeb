@@ -40,26 +40,14 @@ ul {
   height: 40px;
 }
 
-/* 중앙 네비게이션: 로고, 네비, 소셜 아이콘 위치 조정 */
-.nav ul {
-  display: flex;
-  gap: 30px;
-}
-
-/* 네비게이션을 중앙에 두려면 header-inner 안에서 flex정렬로 균형 잡혔으니,
-   추가로 로고가 왼쪽, 소셜 아이콘 오른쪽, nav가 중앙에 오려면 다음 방식:
-   - header-inner를 space-between -> space-evenly or 별도 래퍼 사용
-
-   여기서는 logo, nav, social-icons 순서 유지하고,
-   nav 영역에 margin: 0 auto;를 주어 중앙 정렬을 시도한다.
-*/
-
 .nav {
   flex: 1;
   text-align: center;
 }
 
 .nav ul {
+  display: flex;
+  gap: 30px;
   justify-content: center;
 }
 
@@ -71,15 +59,15 @@ ul {
   color: #00aaff;
 }
 
-/* 소셜 아이콘 */
+/* 아이콘 크기 로고의 80% (로고:40px => 아이콘:32px) */
 .social-icons {
   display: flex;
   gap: 15px;
 }
 
 .icon-img {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
 }
 
 /* 히어로 섹션 */
@@ -106,16 +94,14 @@ ul {
   background: rgba(0,0,0,0.5);
 }
 
-/* 히어로 텍스트 왼쪽 하단 정렬 */
 .hero-content {
-  position: absolute;
-  bottom: 50px;
-  left: 40px; /* 좀 더 왼쪽으로 당김 */
+  position: relative;
   z-index: 1;
-  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* 어워드 섹션 */
 .award-container {
   margin-bottom: 20px;
 }
@@ -125,6 +111,7 @@ ul {
   margin: 0 0 5px 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -134,10 +121,10 @@ ul {
   margin: 0 0 20px 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
-/* 히어로 텍스트 */
 .hero-title {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -160,5 +147,80 @@ ul {
   transition: background 0.3s ease;
 }
 .cta-button:hover {
+  background: #0088cc;
+}
+
+/* 스토어 페이지 스타일 */
+.store-body {
+  background: linear-gradient(to bottom, #201D1E, #141414);
+  color: #E2E2E2;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.store-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.store-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.store-title {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 300;
+}
+
+.store-content {
+  text-align: center;
+}
+
+.store-desc {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #E2E2E2;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.product-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.product-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #E2E2E2;
+}
+
+.product-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.store-btn {
+  background: #00aaff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.store-btn:hover {
   background: #0088cc;
 }
