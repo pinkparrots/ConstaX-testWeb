@@ -33,16 +33,34 @@ ul {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* 좌우 패딩 */
+  padding: 0 20px;
 }
 
 .logo img {
   height: 40px;
 }
 
+/* 중앙 네비게이션: 로고, 네비, 소셜 아이콘 위치 조정 */
 .nav ul {
   display: flex;
   gap: 30px;
+}
+
+/* 네비게이션을 중앙에 두려면 header-inner 안에서 flex정렬로 균형 잡혔으니,
+   추가로 로고가 왼쪽, 소셜 아이콘 오른쪽, nav가 중앙에 오려면 다음 방식:
+   - header-inner를 space-between -> space-evenly or 별도 래퍼 사용
+
+   여기서는 logo, nav, social-icons 순서 유지하고,
+   nav 영역에 margin: 0 auto;를 주어 중앙 정렬을 시도한다.
+*/
+
+.nav {
+  flex: 1;
+  text-align: center;
+}
+
+.nav ul {
+  justify-content: center;
 }
 
 .nav-link {
@@ -51,6 +69,17 @@ ul {
 }
 .nav-link:hover {
   color: #00aaff;
+}
+
+/* 소셜 아이콘 */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon-img {
+  width: 20px;
+  height: 20px;
 }
 
 /* 히어로 섹션 */
@@ -77,21 +106,13 @@ ul {
   background: rgba(0,0,0,0.5);
 }
 
-/* 헤더와 맞춰 좌측 정렬을 하기 위한 컨테이너 */
-.hero-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  height: 100%; /* 필요시 제거 */
-  display: flex;
-  align-items: center; /* 수직 정렬 */
-}
-
-/* 히어로 내용 */
+/* 히어로 텍스트 왼쪽 하단 정렬 */
 .hero-content {
-  position: relative;
+  position: absolute;
+  bottom: 50px;
+  left: 40px; /* 좀 더 왼쪽으로 당김 */
   z-index: 1;
-  text-align: left; /* 왼쪽 정렬 */
+  text-align: left;
 }
 
 /* 어워드 섹션 */
@@ -111,6 +132,9 @@ ul {
   font-size: 0.9rem;
   color: #ccc;
   margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* 히어로 텍스트 */

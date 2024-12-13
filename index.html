@@ -16,13 +16,22 @@
         <div class="logo">
             <img src="images/logo.png" alt="ConstaX Logo" />
         </div>
+        <!-- 중앙 네비게이션 -->
         <nav class="nav">
             <ul>
-                <li><a href="#cash" class="nav-link">캐시 충전</a></li>
+                <li><a href="store.html" class="nav-link">스토어</a></li>
                 <li><a href="#records" class="nav-link">전적 확인</a></li>
             </ul>
         </nav>
-        <!-- 로그인/회원가입 버튼 제거 -->
+        <!-- 우측 소셜 아이콘 (트위터, 디스코드) -->
+        <div class="social-icons">
+            <a href="https://twitter.com/youraccount" target="_blank">
+                <img src="images/twitter-icon.png" alt="Twitter" class="icon-img"/>
+            </a>
+            <a href="https://discord.gg/youraccount" target="_blank">
+                <img src="images/discord-icon.png" alt="Discord" class="icon-img"/>
+            </a>
+        </div>
     </div>
 </header>
 
@@ -33,28 +42,26 @@
     </video>
     <div class="overlay"></div>
 
-    <!-- 헤더와 같은 폭/패딩을 맞추기 위한 컨테이너 -->
-    <div class="hero-inner">
-        <div class="hero-content">
-            <div class="award-container">
-                <p class="award-text">
-                    <!-- 실제 3D 모델 삽입 -->
-                    <model-viewer src="models/3d-object.glb" alt="3D rotating object"
-                                  auto-rotate camera-controls disable-zoom
-                                  style="width:30px;height:30px;vertical-align:middle;">
-                    </model-viewer>
-                    Framer Award 2024
-                </p>
-                <p class="award-subtext">Additional faint text here</p>
-            </div>
-
-            <!-- 메인 타이틀 (수정 가능) -->
-            <h1 class="hero-title">The web builder</h1>
-            <!-- 서브 텍스트 (수정 가능) -->
-            <p class="hero-subtitle">여기에 간략한 설명 텍스트를 넣을 수 있습니다.</p>
-            <!-- CTA 버튼 (수정 가능) -->
-            <button class="cta-button">지금 다운로드하기</button>
+    <div class="hero-content">
+        <div class="award-container">
+            <!-- 각 줄마다 3D 모델 + 텍스트 -->
+            <p class="award-text">
+                <model-viewer src="models/3d-object.glb" alt="3D rotating object"
+                              auto-rotate camera-controls disable-zoom
+                              style="width:20px;height:20px;vertical-align:middle;"></model-viewer>
+                Framer Award 2024
+            </p>
+            <p class="award-subtext">
+                <model-viewer src="models/3d-object.glb" alt="3D rotating object"
+                              auto-rotate camera-controls disable-zoom
+                              style="width:20px;height:20px;vertical-align:middle;"></model-viewer>
+                Additional faint text here
+            </p>
         </div>
+
+        <h1 class="hero-title">The web builder</h1>
+        <p class="hero-subtitle">여기에 간략한 설명 텍스트를 넣을 수 있습니다.</p>
+        <button class="cta-button">지금 다운로드하기</button>
     </div>
 </section>
 
