@@ -33,16 +33,22 @@ ul {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* 좌우 패딩 */
+  padding: 0 20px;
 }
 
 .logo img {
   height: 40px;
 }
 
+.nav {
+  flex: 1;
+  text-align: center;
+}
+
 .nav ul {
   display: flex;
   gap: 30px;
+  justify-content: center;
 }
 
 .nav-link {
@@ -51,6 +57,17 @@ ul {
 }
 .nav-link:hover {
   color: #00aaff;
+}
+
+/* 소셜 아이콘 */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon-img {
+  width: 28px;
+  height: 28px;
 }
 
 /* 히어로 섹션 */
@@ -77,7 +94,6 @@ ul {
   background: rgba(0,0,0,0.5);
 }
 
-/* 히어로 텍스트 위치 및 정렬을 스니펫과 동일하게 */
 .hero-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -90,7 +106,7 @@ ul {
 .hero-content {
   position: relative;
   z-index: 1;
-  text-align: left; /* 왼쪽 정렬 */
+  text-align: left;
 }
 
 .award-container {
@@ -133,5 +149,89 @@ ul {
   transition: background 0.3s ease;
 }
 .cta-button:hover {
+  background: #0088cc;
+}
+
+/* 스토어 페이지 스타일 */
+.store-body {
+  background: linear-gradient(to bottom, #201D1E, #141414);
+  color: #E2E2E2;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.store-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.store-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.store-title {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 300;
+  color: #E2E2E2;
+}
+
+.store-subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.store-content {
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.product-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 150px;
+  background: #333;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-name {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #E2E2E2;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.product-btn {
+  background: #00aaff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.product-btn:hover {
   background: #0088cc;
 }
